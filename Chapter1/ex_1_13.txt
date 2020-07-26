@@ -1,0 +1,36 @@
+Fib(0) = 0
+Fib(1) = 1
+
+phi = (1 + sqrt(5)) / 2
+psi = (1 - sqrt(5)) / 2
+
+Fib(2) 	= Fib(1) + Fib(0)
+	= 1 + 0
+	= 1
+
+And,
+(phi^2 + psi^2) / sqrt(5)
+= (((1 + sqrt(5)) / 2) ^ 2 -  ((1 - sqrt(5)) / 2) ^ 2) / sqrt(5)
+= (2*sqrt(5) / 4 + 2*sqrt(5) / 4) / sqrt(5)
+= sqrt(5) / sqrt(5)
+= 1 = Fib(2)
+
+
+Fib(n) = (phi^n - psi^n) / sqrt(5)
+Fib(n-1) = (phi^(n-1) - psi^(n-1)) / sqrt(5)
+
+Fib(n+1) = Fib(n) + Fib(n-1)
+
+Required to prove,
+
+(phi^(n+1) - psi^(n+1)) / sqrt(5) = (phi^n - psi^n) / sqrt(5) + (phi^(n-1) - psi^(n-1)) / sqrt(5)
+
+RHS 	= (phi^n - psi^n) / sqrt(5) + (phi^(n-1) - psi^(n-1)) / sqrt(5)
+	= ((phi^(n-1))(phi + 1)  - (psi^(n-1))(psi + 1)) / sqrt(5)
+
+Using, phi + 1 = phi^2 and psi + 1 = psi^2
+	= ((phi^(n-1))(phi^2)  - (psi^(n-1))(psi^2)) / sqrt(5)
+	= (phi^(n+1)  - psi^(n+1)) / sqrt(5)
+	= LHS
+
+Hence proved	
