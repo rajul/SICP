@@ -13,6 +13,5 @@
 
 (define (*-new a b)
   (cond ((= b 0) 0)
-	((= b 1) a)
 	((even? b) (double (*-new a (halve b))))
 	(else (+ a (*-new a (- b 1))))))
